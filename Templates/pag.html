@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información</title>
+     <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 4px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Información sobre la vacunación contra el sarampión en niños entre 12-23 meses en Panamá</h1>
+    <p>A continuación, se muestra la información de vacunación de Panamá:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Codigo del país</th>
+                <th>Nombre indicador</th>
+
+                {% for year in range(1980, 2023) %}
+                    <th>{{ year }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in datos.iterrows() %}
+            <tr>
+                <td>{{ row['País'] }}</td>
+                <td>{{ row['Codigo del país'] }}</td>
+                <td>{{ row['Nombre indicador'] }}</td>
+                <td>{{ row['1980'] }}</td>
+                <td>{{ row['1981'] }}</td>
+                <td>{{ row['1982'] }}</td>
+                <td>{{ row['1983'] }}</td>
+                <td>{{ row['1984'] }}</td>
+                <td>{{ row['1985'] }}</td>
+                <td>{{ row['1986'] }}</td>
+                <td>{{ row['1987'] }}</td>
+                <td>{{ row['1988'] }}</td>
+                <td>{{ row['1989'] }}</td>
+                <td>{{ row['1990'] }}</td>
+                <td>{{ row['1991'] }}</td>
+                <td>{{ row['1992'] }}</td>
+                <td>{{ row['1993'] }}</td>
+                <td>{{ row['1994'] }}</td>
+                <td>{{ row['1995'] }}</td>
+                <td>{{ row['1996'] }}</td>
+                <td>{{ row['1997'] }}</td>
+                <td>{{ row['1998'] }}</td>
+                <td>{{ row['1999'] }}</td>
+                <td>{{ row['2000'] }}</td>
+                <td>{{ row['2001'] }}</td>
+                <td>{{ row['2002'] }}</td>
+                <td>{{ row['2003'] }}</td>
+                <td>{{ row['2004'] }}</td>
+                <td>{{ row['2005'] }}</td>
+                <td>{{ row['2006'] }}</td>
+                <td>{{ row['2007'] }}</td>
+                <td>{{ row['2008'] }}</td>
+                <td>{{ row['2009'] }}</td>
+                <td>{{ row['2010'] }}</td>
+                <td>{{ row['2011'] }}</td>
+                <td>{{ row['2012'] }}</td>
+                <td>{{ row['2013'] }}</td>
+                <td>{{ row['2014'] }}</td>
+                <td>{{ row['2015'] }}</td>
+                <td>{{ row['2016'] }}</td>
+                <td>{{ row['2017'] }}</td>
+                <td>{{ row['2018'] }}</td>
+                <td>{{ row['2019'] }}</td>
+                <td>{{ row['2020'] }}</td>
+                <td>{{ row['2021'] }}</td>
+                <td>{{ row['2022'] }}</td>
+
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
